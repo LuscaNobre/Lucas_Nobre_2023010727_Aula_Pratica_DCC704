@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 2. Rolagem dos Carrosséis via Botões Laterais
+    // 2. Rolagem dos Carrosséis via Botões Laterais e Teclado
     document.querySelectorAll('.carousel-wrapper').forEach(wrapper => {
         const grid = wrapper.querySelector('.hobby-grid');
         const btnPrev = wrapper.querySelector('.scroll-btn.prev');
@@ -21,11 +21,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (grid && btnPrev && btnNext) {
             btnPrev.addEventListener('click', () => {
-                grid.scrollBy({ left: -320, behavior: 'smooth' });
+                grid.scrollBy({ left: -280, behavior: 'smooth' });
             });
 
             btnNext.addEventListener('click', () => {
-                grid.scrollBy({ left: 320, behavior: 'smooth' });
+                grid.scrollBy({ left: 280, behavior: 'smooth' });
+            });
+
+            // Navegação por setas do teclado quando o carrossel está focado
+            grid.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowRight') {
+                    grid.scrollBy({ left: 280, behavior: 'smooth' });
+                } else if (e.key === 'ArrowLeft') {
+                    grid.scrollBy({ left: -280, behavior: 'smooth' });
+                }
             });
         }
     });
