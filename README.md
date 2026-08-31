@@ -3,12 +3,19 @@
 Repositório destinado ao Trabalho 3 da disciplina de Desenvolvimento Web do curso de Ciência da Computação da Universidade Federal de Roraima (UFRR). 
 
 O projeto consiste na análise comparativa e refatoração de um blog/portfólio pessoal, focado em elevar as métricas de Acessibilidade, Performance, SEO e Boas Práticas a 100% no Google Lighthouse.
+## 🚀 Links de Acesso Online (GitHub Pages)
+
+* ❌ **Versão 1 (Com falhas intencionais):**  
+  https://luscanobre.github.io/Lucas_Nobre_2023010727_Aula_Pratica_DCC704/index.html
+
+* ✅ **Versão 2 (Refatorada, Acessível e 100% no Lighthouse):**  
+  https://luscanobre.github.io/Lucas_Nobre_2023010727_Aula_Pratica_DCC704/versao2.html
 
 ## Estrutura do Repositório
 
 O projeto foi dividido em duas versões para evidenciar o contraste entre um código mal estruturado e um código construído sob os padrões da web moderna:
 
-* **Versão 1 (`versao1.html`, `style.css` e `script.js`):** Código contendo falhas intencionais, como uso excessivo de `<div>` (semântica inadequada), layout quebrado em dispositivos móveis, baixo contraste de cores (falha WCAG) e elementos interativos inacessíveis via teclado.
+* **Versão 1 (`index.html`, `style.css` e `script.js`):** Código contendo falhas intencionais, como uso excessivo de `<div>` (semântica inadequada), layout quebrado em dispositivos móveis, baixo contraste de cores (falha WCAG) e elementos interativos inacessíveis via teclado.
 * **Versão 2 (`versao2.html`, `style2.css` e `script2.js`):** Código refatorado aplicando landmarks do HTML5 (`<header>`, `<main>`, `<article>`, `<aside>`), CSS Grid Mobile-First, variáveis de alto contraste, otimização de imagens (LCP/CLS) e atributos nativos ARIA (`aria-expanded`) para tecnologias assistivas.
 * **`img/`:** Diretório contendo as mídias locais otimizadas do projeto.
 * **`relatorio_trabalho3.pdf`:** Relatório técnico gerado em LaTeX detalhando a refatoração e a auditoria comparativa no Google Lighthouse.
