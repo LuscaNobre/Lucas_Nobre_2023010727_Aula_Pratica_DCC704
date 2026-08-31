@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Falhas intencionais: Ausência de meta charset, viewport e description -->
+  <title>Lucas Nobre — Dev & Comp</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Banner de Navegação para a Versão 2 -->
+  <div class="banner-versao2">
+    <p>💡 Quer ver esta página refatorada com HTML5 Semântico e 100% no Lighthouse?</p>
+    <a href="versao2.html" class="btn-ir-versao2">Ver Versão Melhorada (V2) 🚀</a>
+  </div>
+
+  <!-- Topo Não Semântico -->
+  <div class="topo">
+    <div class="nome-site">Lucas Nobre — Dev & Comp</div>
+    <div class="links-menu">
+      <div class="link-item" onclick="alert('Indo para Início')">Início</div>
+      <div class="link-item" onclick="alert('Indo para Trajetória')">Trajetória</div>
+      <div class="link-item" onclick="alert('Indo para Hobbies')">Hobbies</div>
+    </div>
+  </div>
+
+  <div class="corpo-pagina">
+    <!-- Bloco de Conteúdo Principal -->
+    <div class="conteudo-principal">
+      <div class="post-perfil">
+        <div class="titulo-post">Olá, eu sou o Lucas Nobre!</div>
+        <div class="subtitulo-autor">Publicado em 27/08/2026 por Lucas</div>
+        
+        <div class="bloco-foto">
+          <!-- Imagem sem alt e sem dimensões explícitas (Gera CLS e Erro de Acessibilidade) -->
+          <img src="img/perfil.jpeg" class="foto-perfil">
+        </div>
+
+        <div class="secao-texto">
+          <div class="titulo-secao">Trajetória Acadêmica e Profissional</div>
+          <div class="texto">
+            Sou discente do curso de Ciência da Computação na Universidade Federal de Roraima (UFRR). Participo de projetos de extensão e do grupo de pesquisa PRISM UFRR.
+          </div>
+        </div>
+
+        <div class="secao-texto">
+          <div class="titulo-secao">Hobbies e Interesses Pessoais</div>
+          <div class="texto">
+            • Jogos: Zelda, Red Dead Redemption 2, Enigma do Medo, The Witcher 3, It Takes Two.<br>
+            • Músicas: Tame Impala, Frank Ocean, Mac Miller, Tim Bernardes, Charlie Brown Jr.<br>
+            • Filmes: O Serviço de Entregas da Kiki, Interestelar, Corra!, Ultimato, Aranhaverso.<br>
+            • Séries: How I Met Your Mother, A Casa do Dragão, The Office, The Boys, Ruptura.
+          </div>
+        </div>
+
+        <!-- Botão Inacessível (Div com onclick, sem suporte a teclado) -->
+        <div class="botao-interativo" id="btn-mensagem">
+          Clique para saber mais
+        </div>
+        <div id="mensagem-secreta" style="display:none; margin-top:15px; color:#aaa;">
+          "O segredo do desenvolvimento web moderno é a constante evolução!"
+        </div>
+      </div>
+    </div>
+
+    <!-- Barra Lateral Não Semântica -->
+    <div class="barra-lateral">
+      <div class="titulo-lateral">Artigos Recomendados</div>
+      <div class="item-lateral">Análise de Algoritmos: Insertion Sort na Prática</div>
+      <div class="item-lateral">Como Configurar Acessibilidade com HTML5</div>
+      <div class="item-lateral">Introdução aos Sistemas Distribuídos</div>
+    </div>
+  </div>
+
+  <!-- Rodapé -->
+  <div class="rodape">
+    <div>&copy; 2026 Lucas Nobre — Todos os direitos reservados. DCC / UFRR</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
