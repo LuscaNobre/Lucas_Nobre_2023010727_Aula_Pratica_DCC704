@@ -16,10 +16,11 @@
 }
 
 body {
-    font-family: system-ui, -apple-system, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     background-color: var(--bg);
     color: var(--text);
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 .header {
@@ -57,7 +58,8 @@ body {
     font-weight: 500;
 }
 
-.nav-list a:hover, .nav-list a:focus-visible {
+.nav-list a:hover, 
+.nav-list a:focus-visible {
     color: #ffffff;
     text-decoration: underline;
 }
@@ -80,11 +82,12 @@ body {
     }
 }
 
-.primary-article, .sidebar {
+.primary-article, 
+.sidebar {
     background: var(--card-bg);
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
     min-width: 0;
 }
 
@@ -100,11 +103,19 @@ h1 {
     margin-bottom: 1.5rem;
 }
 
+.profile-figure {
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
 .profile-img {
     width: 100%;
     height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
     border-radius: 8px;
-    margin-bottom: 1.5rem;
+    display: block;
+    background-color: #e2e8f0;
 }
 
 .content-section {
@@ -112,7 +123,8 @@ h1 {
     min-width: 0;
 }
 
-.content-section h2, .sidebar h2 {
+.content-section h2, 
+.sidebar h2 {
     font-size: 1.3rem;
     color: var(--brand);
     margin-bottom: 1rem;
@@ -120,17 +132,16 @@ h1 {
     padding-bottom: 0.4rem;
 }
 
-/* Container de cada categoria de Hobbies com expansão lateral */
+/* Container de cada categoria de Hobbies */
 .hobby-category {
-    margin-bottom: 3rem;
-    margin-right: -2rem;
+    margin-bottom: 2.5rem;
     min-width: 0;
 }
 
 .hobby-category h3 {
-    font-size: 1.35rem;
+    font-size: 1.25rem;
     color: var(--primary);
-    margin-bottom: 1.2rem;
+    margin-bottom: 1rem;
 }
 
 /* Container do Carrossel e Botões */
@@ -144,14 +155,19 @@ h1 {
 /* Carrossel Horizontal Estilo Netflix */
 .hobby-grid {
     display: flex;
-    gap: 1.5rem;
+    gap: 1.25rem;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-    padding: 1rem 2rem 1.5rem 0.5rem;
+    padding: 0.5rem 0.5rem 1rem 0.5rem;
     width: 100%;
     min-width: 0;
     -webkit-overflow-scrolling: touch;
+}
+
+.hobby-grid:focus-visible {
+    outline: 2px solid var(--brand);
+    border-radius: 8px;
 }
 
 .hobby-grid::-webkit-scrollbar {
@@ -175,21 +191,21 @@ h1 {
 /* Botões de Rolagem estilo Netflix */
 .scroll-btn {
     position: absolute;
-    top: 45%;
+    top: 50%;
     transform: translateY(-50%);
-    background: rgba(27, 77, 62, 0.85);
+    background: rgba(27, 77, 62, 0.9);
     color: #ffffff;
     border: none;
-    width: 40px;
-    height: 40px;
+    width: 38px;
+    height: 38px;
     border-radius: 50%;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     cursor: pointer;
     z-index: 10;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: background-color 0.2s, transform 0.2s;
 }
 
@@ -198,47 +214,52 @@ h1 {
     transform: translateY(-50%) scale(1.1);
 }
 
+.scroll-btn:focus-visible {
+    outline: 3px solid #f97316;
+}
+
 .scroll-btn.prev {
-    left: -15px;
+    left: -12px;
 }
 
 .scroll-btn.next {
-    right: 10px;
+    right: -12px;
 }
 
 /* Cards de mídia ampliados */
 .hobby-card {
-    flex: 0 0 240px;
+    flex: 0 0 220px;
     scroll-snap-align: start;
     background-color: #ffffff;
     border: 1px solid var(--border);
     border-radius: 10px;
-    padding: 0.8rem;
+    padding: 0.75rem;
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .hobby-card:hover {
-    transform: translateY(-8px) scale(1.03);
-    box-shadow: 0 12px 22px rgba(0, 0, 0, 0.15);
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
 }
 
 .hobby-card img {
     width: 100%;
-    height: 340px;
+    height: auto;
+    aspect-ratio: 240 / 340;
     object-fit: cover;
     border-radius: 8px;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.75rem;
     display: block;
     background-color: #e2e8f0;
 }
 
 .hobby-card figcaption {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     font-weight: 600;
     color: var(--text);
-    line-height: 1.35;
+    line-height: 1.3;
 }
 
 /* Botão Interativo e Mensagem */
