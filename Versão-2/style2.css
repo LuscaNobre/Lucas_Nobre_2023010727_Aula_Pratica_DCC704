@@ -111,9 +111,9 @@ h1 {
 .profile-img {
     width: 100%;
     height: auto;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 4/ 3;
     object-fit: cover;
-    object-position: left 15%;
+    object-position: left 60%;
     border-radius: 8px;
     display: block;
     background-color: #e2e8f0;
