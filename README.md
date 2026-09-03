@@ -6,10 +6,10 @@ O projeto consiste na análise comparativa e refatoração de um blog/portfólio
 ## 🚀 Links de Acesso Online (GitHub Pages)
 
 * ❌ **Versão 1 (Com falhas intencionais):**  
-  https://luscanobre.github.io/Lucas_Nobre_2023010727_Aula_Pratica_DCC704/index.html
+  https://luscanobre.github.io/Lucas_Nobre_2023010727_Aula_Pratica_DCC704/Versão-1/index.html
 
 * ✅ **Versão 2 (Refatorada, Acessível e 100% no Lighthouse):**  
-  https://luscanobre.github.io/Lucas_Nobre_2023010727_Aula_Pratica_DCC704/versao2.html
+  https://luscanobre.github.io/Lucas_Nobre_2023010727_Aula_Pratica_DCC704/Versão-2/versao2.html
 
 ## Estrutura do Repositório
 
