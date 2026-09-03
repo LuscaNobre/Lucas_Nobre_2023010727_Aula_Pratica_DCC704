@@ -152,7 +152,7 @@ h1 {
     min-width: 0;
 }
 
-/* Carrossel Horizontal Estilo Netflix */
+/* Carrossel Horizontal*/
 .hobby-grid {
     display: flex;
     gap: 1.25rem;
@@ -188,7 +188,7 @@ h1 {
     background: var(--brand-hover);
 }
 
-/* Botões de Rolagem estilo Netflix */
+/* Botões de Rolagem */
 .scroll-btn {
     position: absolute;
     top: 50%;
