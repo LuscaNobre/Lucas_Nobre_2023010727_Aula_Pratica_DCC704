@@ -113,6 +113,7 @@ h1 {
     height: auto;
     aspect-ratio: 16 / 9;
     object-fit: cover;
+    object-position: left 15%;
     border-radius: 8px;
     display: block;
     background-color: #e2e8f0;
